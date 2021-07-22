@@ -20,4 +20,4 @@ function add(){
 
 function removeItem(){
     document.getElementById('list').innerHTML = '';
-}
+} 
