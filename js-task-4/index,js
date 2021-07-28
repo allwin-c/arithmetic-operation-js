@@ -1,0 +1,35 @@
+var array = Array();
+
+function add_element_to_array()
+{
+
+  var age = document.getElementById('text2');
+  var n = age.value;
+  n = Number(n);
+  if (n < 14) {
+    alert('Enter Age above 14');
+
+  }
+
+ array[0] = document.getElementById("text1").value;
+ array[1] = document.getElementById("text2").value;
+ array[2] = document.getElementById("text3").value;
+ 
+
+ 
+}
+
+function display_array()
+{
+   var e;   
+    
+     e =  array + "<br/>";
+     console.log(array.length);
+   document.getElementById("Result").innerHTML = e;
+}
+function removeItem(){
+    document.getElementById("text1").value = "";
+    document.getElementById('text2').value = "";
+    document.getElementById('text3').value = "";
+
+}
