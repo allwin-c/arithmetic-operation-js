@@ -1,35 +1,40 @@
-var array = Array();
+var list = [];
 
-function add_element_to_array()
-{
 
+function removeItem(){
+    document.getElementById("text1").value = "";
+    document.getElementById('text2').value = "";
+    document.getElementById('text3').value = "";
+}
+
+var list = [];
+function add() {
   var age = document.getElementById('text2');
   var n = age.value;
   n = Number(n);
   if (n < 14) {
     alert('Enter Age above 14');
-
+    return;
   }
-
- array[0] = document.getElementById("text1").value;
- array[1] = document.getElementById("text2").value;
- array[2] = document.getElementById("text3").value;
- 
-
- 
+  var name = document.getElementsByClassName('name')[0];
+  var age = document.getElementsByClassName('age')[0];
+  var company = document.getElementsByClassName('company')[0];
+  console.log(name);
+  console.log(name.value);
+  console.log(age.value);
+  console.log(company.value);
+  var newlist = [];
+  newlist.push(name.value, age.value, company.value);
+  list.push(newlist);
+  console.log(list);
 }
+function display() {
 
-function display_array()
-{
-   var e;   
-    
-     e =  array + "<br/>";
-     console.log(array.length);
-   document.getElementById("Result").innerHTML = e;
-}
-function removeItem(){
-    document.getElementById("text1").value = "";
-    document.getElementById('text2').value = "";
-    document.getElementById('text3').value = "";
+  var text = '';
+  for(var i=0;i<list.length;i++)
+  {
+  text += list[i] + "<br>";
+  }
+    document.getElementById('display').innerHTML = text;
 
 }
