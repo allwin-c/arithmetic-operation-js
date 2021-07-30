@@ -8,14 +8,17 @@
 </head>
 <body>
 
-<input type="text" id="text1" placeholder="Enter Name" class="form-action" ></input> <br /><br />
-<input type="text" id="text2" placeholder="Enter Age" class="form-action" ></input><br /><br />
-<input type="text" id="text3" placeholder="Enter Company Name" class="form-action"></input><br /><br />
-
-<input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
-<button onclick="removeItem()">Clear</button>
-<input type="button" id="button2" value="Display" onclick="display_array();"></input>
-<ul id="Result"></ul> 
+		<input type="text" class="name" id="text1" placeholder="Enter Name" />
+		<br /><br />
+		<input type="text" class="age" id="text2" placeholder="Enter Age" />
+		<br /><br />
+		<input type="text" class="company" id="text3" placeholder="Company Name" />
+		<br />
+		<br />
+		<button onclick="add()">Submit</button>
+		<button onclick="removeItem()">Clear</button>
+		<button onclick="display()">Display</button>
+		<div class="display" id="display"></div> 
 
 </body>
 </html>
