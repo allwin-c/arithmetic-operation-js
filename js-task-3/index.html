@@ -8,16 +8,18 @@
 </head>
 <body>
 
-<input type="text" id="text1" placeholder="First Name" class="form-action" ></input> <br /><br />
-<input type="text" id="text2" placeholder="Last Name" class="form-action" ></input><br /><br />
-<input type="text" id="text3" placeholder="Company Name" class="form-action"></input><br /><br />
-<input type="radio" id="text4" name="type" value="company">Company</input>
-<input type="radio" id="text5" name="type" value="personal">Personal</input><br /><br />
-
-<input type="button" id="button1" value="Submit" onclick="add_element_to_array();"></input>
-<button onclick="removeItem()">Clear</button>
-<input type="button" id="button2" value="Display" onclick="display_array();"></input>
-<ul id="result"></ul> 
+		<input type="text" class="name" id="text1" placeholder="Enter First Name" />
+		<br /><br />
+		<input type="text" class="age" id="text2" placeholder="Enter Last Name" />
+		<br /><br />
+		<input type="text" class="company" id="text3" placeholder="Company Name" />
+		<br /><br />
+		<input type="radio" id="text4" name="type" value="company">Company</input>
+		<input type="radio" id="text5" name="type" value="personal">Personal</input><br /><br />
+		<button onclick="add()">Submit</button>
+		<button onclick="removeItem()">Clear</button>
+		<button onclick="display()">Display</button>
+		<div class="display" id="display"></div> 
 
 </body>
 </html>
