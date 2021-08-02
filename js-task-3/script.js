@@ -1,29 +1,34 @@
-var array = Array();
 var type;
+var newlist = [];
+var list = [];
+var text = '';
 
-function add_element_to_array()
-{
 
-    type = document.getElementsByName("type");
-
- array[0] = document.getElementById("text1").value;
- array[1] = document.getElementById("text2").value;
- array[2] = document.getElementById("text3").value;
-
-}
-
-function display_array()
-{
-   var e;   
-    
-   
-     if(type[0].checked){
-  result.innerHTML = (array[0] + "." + array[1] + "@" + array[2] + ".com");
-}
-else if(type[1].checked){
-  result.innerHTML = (array[0] + "." + array[1] + "@gmail.com");
-}
-     console.log(array.length);
+function add() {
+  var name = document.getElementById('text1').value;
+  var age = document.getElementById('text2').value;
+  var company = document.getElementById('text3').value;
+  type = document.getElementsByName("type");
+  var newlist = [];
+  newlist.push({name, age, company});
+  console.log(name);
+  console.log(age);
+  console.log(company);
+  list.push(newlist);
+  console.log(newlist);
+  if(type[0].checked)
+  {
+  text += (" "+ name + "." + age + "@" + company + ".com" + "<br />");
+  }
+  if(type[1].checked)
+  {
+  text += (name + "." + age + "@gmail.com" + "<br />");
+  }
+    document.getElementById("text1").value = "";
+  document.getElementById('text2').value = "";
+  document.getElementById('text3').value = "";
+  document.getElementById('text4').value = "";
+  document.getElementById('text5').value = "";
 }
 
 function removeItem(){
@@ -34,3 +39,8 @@ function removeItem(){
     document.getElementById('text5').value = "";
 
 }
+
+function display() {
+      document.getElementById('display').innerHTML = text;
+      console.log(text);
+   }
